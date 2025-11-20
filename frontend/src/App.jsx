@@ -3,7 +3,7 @@ import "./index.css";
 
 function App() {
   const [message, setMessage] = useState("Loading...");
-  const BASE_URL = import.meta.VITE_BASE_URL
+  const BASE_URL = import.meta.env.VITE_BASE_URL
   useEffect(() => {
     // call backend API
     fetch(`${BASE_URL}/api/health`)
