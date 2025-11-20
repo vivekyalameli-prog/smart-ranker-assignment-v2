@@ -6,7 +6,7 @@ function App() {
   const BASE_URL = import.meta.VITE_BASE_URL
   useEffect(() => {
     // call backend API
-    fetch("http://localhost:3000/api/health")
+    fetch(`${BASE_URL}/api/health`)
       .then((res) => res.json())
       .then((data) => setMessage(data.message))
       .catch(() => setMessage("Backend not responding"));
